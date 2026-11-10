@@ -1,0 +1,21 @@
+{
+  "name": "homer-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts of Homer, the liquidity layer of Elysium (https://homer.finance).",
+  "license": "MIT",
+  "repository": "github:homer-finance/homer-contracts",
+  "scripts": {
+    "build": "node build.js",
+    "verify-input": "node scripts/verify-input.js",
+    "test": "node scripts/fork.js",
+    "test:swap": "node scripts/fork-swap.js && node scripts/live-sim-swap.js",
+    "test:v4": "hardhat --config hardhat.cancun.config.js run scripts/fork-v4.js",
+    "test:refvault": "hardhat run scripts/test-refvault.js"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "5.1.0",
+    "ethers": "6.13.4",
+    "hardhat": "2.22.17",
+    "solc": "0.8.28"
+  }
+}
